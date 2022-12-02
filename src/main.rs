@@ -29,10 +29,15 @@ fn main() {
     // };
 
     for _ in 0..args.count {
+        let cuid_value = if args.slug {
+            cuid::slug().unwrap()
+        } else {
+            cuid::cuid().unwrap()
+        };
         println!(
             "{}{}",
             args.prefix.as_deref().unwrap_or_default(),
-            cuid::cuid().unwrap()
+            cuid_value
         )
     }
 }
