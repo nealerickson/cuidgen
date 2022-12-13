@@ -27,7 +27,7 @@ Simple program to generate CUIDs
 Usage: cuidgen [OPTIONS]
 
 Options:
-  -c, --count <COUNT>    number of CUIDs to generate [default: 1]
+  -N, --num-cuids <NUM>  number of CUIDs to generate [default: 1]
   -p, --prefix <PREFIX>  prefix of the CUID
   -s, --slug             generate a slug instead of a full CUID
   -h, --help             Print help information
@@ -35,7 +35,7 @@ Options:
 
 Examples:
   cuidgen
-  cuidgen --count=10
-  cuidgen --prefix=id_
+  cuidgen -N=10
+  cuidgen -p=id_
   cuidgen --slug
 ```
